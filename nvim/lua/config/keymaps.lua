@@ -1,3 +1,4 @@
+-- vim.g.mapleader = " "
 local set = vim.keymap.set
 
 ----------------------------------------
@@ -35,7 +36,7 @@ set("n", "<C-Right>", "<Cmd>vertical resize +2<CR>", { desc = "Increase window w
 ----------------------------------------
 -- Better J behavior
 ----------------------------------------
--- set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
+set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
 ----------------------------------------
 -- Remain visual mode when indenting

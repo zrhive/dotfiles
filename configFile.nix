@@ -1,4 +1,4 @@
-{ config, lib, dots, ... }:
+{ config, lib, ... }:
 
 let
   inherit (lib) mkOption types genAttrs;
