@@ -204,20 +204,20 @@
   :root {
     /* These colours are (mainly) used by the
      Container Tabs Plugin */
-    --uc-identity-colour-blue: #7ed6df;
-    --uc-identity-colour-turquoise: #55e6c1;
-    --uc-identity-colour-green: #b8e994;
-    --uc-identity-colour-yellow: #f7d794;
-    --uc-identity-colour-orange: #f19066;
-    --uc-identity-colour-red: #fc5c65;
-    --uc-identity-colour-pink: #f78fb3;
-    --uc-identity-colour-purple: #786fa6;
+    --uc-identity-colour-blue: #8aadf4;
+    --uc-identity-colour-turquoise: #8bd5ca;
+    --uc-identity-colour-green: #a6da95;
+    --uc-identity-colour-yellow: #eed49f;
+    --uc-identity-colour-orange: #f5a97f;
+    --uc-identity-colour-red: #ed8796;
+    --uc-identity-colour-pink: #f5bde6;
+    --uc-identity-colour-purple: #c6a0f6;
 
     /*  Cascades main Colour Scheme */
-    --uc-base-colour: #1e2021;
-    --uc-highlight-colour: #191b1c;
-    --uc-inverted-colour: #fafafc;
-    --uc-muted-colour: #aaaaac;
+    --uc-base-colour: #24273a;
+    --uc-highlight-colour: #1e2030;
+    --uc-inverted-colour: #cad3f5;
+    --uc-muted-colour: #6e738d;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
@@ -226,20 +226,20 @@
   :root {
     /* These colours are (mainly) used by the
      Container Tabs Plugin */
-    --uc-identity-colour-blue: #1d65f5;
-    --uc-identity-colour-turquoise: #209fb5;
+    --uc-identity-colour-blue: #1e66f5;
+    --uc-identity-colour-turquoise: #179299;
     --uc-identity-colour-green: #40a02b;
-    --uc-identity-colour-yellow: #e49320;
+    --uc-identity-colour-yellow: #df8e1d;
     --uc-identity-colour-orange: #fe640b;
-    --uc-identity-colour-red: #fc5c65;
-    --uc-identity-colour-pink: #ec83d0;
-    --uc-identity-colour-purple: #822fee;
+    --uc-identity-colour-red: #d20f39;
+    --uc-identity-colour-pink: #d20f39;
+    --uc-identity-colour-purple: #8839ef;
 
     /*  Cascades main Colour Scheme */
-    --uc-base-colour: #fafafc;
-    --uc-highlight-colour: #dadadc;
-    --uc-inverted-colour: #1e2021;
-    --uc-muted-colour: #191b1c;
+    --uc-base-colour: #eff1f5;
+    --uc-highlight-colour: #dce0e8;
+    --uc-inverted-colour: #4c4f69;
+    --uc-muted-colour: #9ca0b0;
     --uc-accent-colour: var(--uc-identity-colour-purple);
   }
 }
