@@ -1,5 +1,9 @@
-# Catppuccin: https://github.com/catppuccin/yazi
+# ----------------------------------
+# Catppuccin
+# ----------------------------------
 # Macchiato Flavor Theme
+# https://github.com/catppuccin/yazi
+# ----------------------------------
 
 [app]
 overall = { bg = "#24273a" }
