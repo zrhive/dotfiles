@@ -1,7 +1,5 @@
 local M = {}
 
-local diagnostics = require("utils.diagnostics")
-
 -- capabilities
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 M.capabilities = capabilities
@@ -19,8 +17,8 @@ function M.on_attach(client, bufnr)
 	map("n", "K", vim.lsp.buf.hover, "Hover")
 	map("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
 	map("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
-	map("n", "[d", vim.diagnostic.goto_prev, "Prev diagnostic")
-	map("n", "]d", vim.diagnostic.goto_next, "Next diagnostic")
+	-- map("n", "[d", vim.diagnostic.goto_prev, "Prev diagnostic")
+	-- map("n", "]d", vim.diagnostic.goto_next, "Next diagnostic")
 	map("n", "<leader>d", vim.diagnostic.open_float, "Line diagnostics")
 
 	-- Inlay hints

@@ -1,23 +1,23 @@
 local M = {}
 
 local signs = {
-	Error = "",
-	Warn = "",
+	Error = "",
+	Warn = "",
 	Hint = "",
-	Info = "",
+	Info = "󰋼",
 }
 
 function M.setup()
 	vim.diagnostic.config({
-        virtual_text = true,
-        severity_sort = true,
-        float = {
-            style = "minimal",
-            border = "rounded",
-            source = "if_many",
-            header = "",
-            prefix = "",
-        },
+		virtual_text = true,
+		severity_sort = true,
+		float = {
+			style = "minimal",
+			border = "rounded",
+			source = "if_many",
+			header = "",
+			prefix = "",
+		},
 		signs = {
 			text = {
 				[vim.diagnostic.severity.ERROR] = signs.Error,
@@ -27,10 +27,6 @@ function M.setup()
 			},
 		},
 	})
-end
-
-function M.keymap()
-
 end
 
 return M
