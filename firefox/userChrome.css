@@ -48,7 +48,7 @@
    *  inside the URL Bar. This might need
    *  customisation depending on your setup!
    */
-  --uc-page-action-margin: 1px;
+  --uc-page-action-margin: 0px;
 }
 
 /* remove window control buttons */
@@ -97,8 +97,8 @@
    *  If enabled the max-width is applied on focus
    *  otherwise the URL Bar will always be it's min-width
    */
-  --uc-urlbar-min-width: 0vw;
-  --uc-urlbar-max-width: 100vw;
+  --uc-urlbar-min-width: -1vw;
+  --uc-urlbar-max-width: 50vw;
 
   /*  Position of the URL Bar
    *  possible values:
@@ -149,6 +149,9 @@
 
 /* Hides the Extensions Menu Icon */
 /* #unified-extensions-button { display: none !important; } */
+
+/* Fixes Popups position when Extensions Menu Icon is hidden */
+/* #notification-popup { margin: 1em -30em !important; } */
 
 #alltabs-button {
   margin-top: 5px !important;
@@ -335,6 +338,13 @@
 }
 
 #toolbar-menubar {
+  position: relative;
+  display: flex;
+  top: var(--uc-titlebar-padding, 0px);
+  height: 24px;
+  width: 100%;
+  overflow: hidden;
+
   &[autohide="true"] {
     &[inactive]:not([customizing]) {
       width: 0px;
@@ -398,7 +408,7 @@
 /* @import "includes/cascade-responsive.css"; {{{ */
 /* with includes/cascade-responsive-windows-fix.css */
 
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   #navigator-toolbox {
     display: flex;
     flex-wrap: wrap;
@@ -411,13 +421,13 @@
     &.browser-titlebar {
       width: 100%;
     }
-	margin: calc((var(--urlbar-min-height) * -1) - 12px)
-      calc(100vw - var(--uc-urlbar-min-width)) 0 0 !important;
+	/* margin: calc((var(--urlbar-min-height) * -1) - 12px) */
+	/*      calc(100vw - var(--uc-urlbar-min-width)) 0 0 !important; */
   }
 
-  #titlebar {
-    margin-inline-start: var(--uc-urlbar-min-width) !important;
-  }
+  /* #titlebar { */
+  /*   margin-inline-start: var(--uc-urlbar-min-width) !important; */
+  /* } */
 
   #nav-bar #urlbar-container {
     min-width: 0px !important;
@@ -433,13 +443,13 @@
     &.browser-titlebar {
       width: 100%;
     }
-	margin: calc((var(--urlbar-min-height) * -1) - 12px)
-      calc(100vw - var(--uc-urlbar-max-width)) 0 0 !important;
+	/* margin: calc((var(--urlbar-min-height) * -1) - 12px) */
+	/*      calc(100vw - var(--uc-urlbar-max-width)) 0 0 !important; */
   }
 
   #navigator-toolbox:focus-within #titlebar {
     width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
-	margin-inline-start: var(--uc-urlbar-max-width) !important;
+	/* margin-inline-start: var(--uc-urlbar-max-width) !important; */
   }
 }
 
