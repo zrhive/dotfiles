@@ -1,4 +1,21 @@
 -- -------------------------------------------------
+-- Size and modifies time in linemode
+-- -------------------------------------------------
+function Linemode:size_and_mtime()
+	local time = math.floor(self._file.cha.mtime or 0)
+	if time == 0 then
+		time = ""
+	elseif os.date("%Y", time) == os.date("%Y") then
+		time = os.date("%b %d %H:%M", time)
+	else
+		time = os.date("%b %d  %Y", time)
+	end
+
+	local size = self._file:size()
+	return string.format("%s %s", size and ya.readable_size(size) or "-", time)
+end
+
+-- -------------------------------------------------
 -- Cross-instance yank ability
 -- -------------------------------------------------
 require("session"):setup({
@@ -27,5 +44,9 @@ require("smart-enter"):setup({ open_multi = true })
 
 -- toggle-pane for yazi nvim
 if os.getenv("NVIM") then
-	require("toggle-pane"):entry("min-preview")
+	require("toggle-pane"):entry("min-parent")
+end
+-- toggle-pane for yazi nvim
+if os.getenv("YAZI") then
+	require("toggle-pane"):entry("min-parent")
 end
