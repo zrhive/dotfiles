@@ -58,5 +58,10 @@ use = "yazi-rs/plugins:smart-paste"
 rev = "1962818"
 hash = "3f8d49413bc8691b4c652eb417a20178"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "1962818"
+hash = "384464b6df8cb807425c521f8cd790f3"
+
 [flavor]
 deps = []

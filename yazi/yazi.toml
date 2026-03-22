@@ -23,35 +23,36 @@ cursor_blink = true
 
 [opener]
 edit = [
-	{ run = "direnv exec . $EDITOR %s", desc = "$EDITOR", for = "unix", block = true },
-	{ run = "sudoedit %s", desc = "sudo $EDITOR", for = "unix", block = true },
+	{ run = "direnv exec . $EDITOR %s", desc = "$EDITOR",       for = "unix", block = true },
+	{ run = "sudoedit %s",              desc = "sudo $EDITOR",  for = "unix", block = true },
 ]
 
 [plugin]
 prepend_preloaders = [
   # Media info
-  { mime = "{audio,video,image}/*", run = "mediainfo" },
-  { mime = "application/subrip", run = "mediainfo" },
-  { mime = "application/postscript", run = "mediainfo" },
-  { mime = "application/illustrator", run = "mediainfo" },
-  { mime = "application/dvb.ait", run = "mediainfo" },
+  { mime = "{audio,video,image}/*",             run = "mediainfo" },
+  { mime = "application/subrip",                run = "mediainfo" },
+  { mime = "application/postscript",            run = "mediainfo" },
+  { mime = "application/illustrator",           run = "mediainfo" },
+  { mime = "application/dvb.ait",               run = "mediainfo" },
   { mime = "application/vnd.adobe.illustrator", run = "mediainfo" },
-  { mime = "image/x-eps", run = "mediainfo" },
-  { mime = "application/eps", run = "mediainfo" },
-  { url = "*.{ai,eps,ait}", run = "mediainfo" },
+  { mime = "image/x-eps",                       run = "mediainfo" },
+  { mime = "application/eps",                   run = "mediainfo" },
+  { url = "*.{ai,eps,ait}",                     run = "mediainfo" },
 ]
 prepend_previewers = [
   # Ouch
   { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run  = "ouch" },
   # Media info
-  { mime = "{audio,video,image}/*", run = "mediainfo"},
-  { mime = "application/subrip", run = "mediainfo" },
-  { mime = "application/postscript", run = "mediainfo" },
-  { mime = "application/illustrator", run = "mediainfo" },
-  { mime = "application/dvb.ait", run = "mediainfo" },
+  { mime = "{audio,video,image}/*",             run = "mediainfo"},
+  { mime = "application/subrip",                run = "mediainfo" },
+  { mime = "application/postscript",            run = "mediainfo" },
+  { mime = "application/illustrator",           run = "mediainfo" },
+  { mime = "application/dvb.ait",               run = "mediainfo" },
   { mime = "application/vnd.adobe.illustrator", run = "mediainfo" },
-  { mime = "image/x-eps", run = "mediainfo" },
-  { mime = "application/eps", run = "mediainfo" },
-  { url = "*.{ai,eps,ait}", run = "mediainfo" },
+  { mime = "image/x-eps",                       run = "mediainfo" },
+  { mime = "application/eps",                   run = "mediainfo" },
+  { url = "*.{ai,eps,ait}",                     run = "mediainfo" },
+  # # Piper
+  # { url = "*", run = 'piper -- echo "$1"' },
 ]
-
