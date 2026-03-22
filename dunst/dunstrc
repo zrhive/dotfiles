@@ -39,8 +39,8 @@
     # idle_threshold = 120
 
     ### Text ###
-    font = "JetBrains Mono" 16:style=Bold
-    line_height = 6
+    font = JetBrainsMono Nerd Font Mono 10
+    line_height = 12
     markup = full
 
     # The format of the message.  Possible variables are:
@@ -70,7 +70,7 @@
 
     ### Icons ###
     enable_recursive_icon_lookup = true
-    icon_theme = Papirus
+    # icon_theme = Papirus
     icon_position = left
     min_icon_size = 32
     max_icon_size = 128
