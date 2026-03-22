@@ -4,7 +4,7 @@
     follow = none
 
     ### Geometry ###
-    width = 300
+    width = 500
     height = (0, 300)
     origin = top-right
     offset = (10, 50)
@@ -20,7 +20,7 @@
     progress_bar_corner_radius = 10
     progress_bar_corners = all
 
-	icon_corner_radius = 2
+    icon_corner_radius = 2
     icon_corners = all
 
     indicate_hidden = yes
@@ -30,17 +30,17 @@
     horizontal_padding = 8
     text_icon_padding = 0
 
-	frame_width = 3
+    frame_width = 0
     frame_color = "#8caaee"
     gap_size = 0
     separator_color = frame
-	highlight = "#8caaee"
+    highlight = "#8caaee"
     sort = yes
     # idle_threshold = 120
 
     ### Text ###
-    font = Monospace 8
-    line_height = 0
+    font = "JetBrains Mono" 16:style=Bold
+    line_height = 6
     markup = full
 
     # The format of the message.  Possible variables are:
@@ -70,8 +70,7 @@
 
     ### Icons ###
     enable_recursive_icon_lookup = true
-    # icon_theme = Papirus
-    # icon_theme = "Adwaita, breeze"
+    icon_theme = Papirus
     icon_position = left
     min_icon_size = 32
     max_icon_size = 128

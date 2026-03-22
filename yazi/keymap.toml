@@ -39,8 +39,8 @@ prepend_keymap = [
   { on   = [ "C", "a", "l" ], run  = "plugin compress -l",    desc = "Archive selected files (compression level)" },
   { on   = [ "C", "a", "u" ], run  = "plugin compress -phl",  desc = "Archive selected files (password+header+level)" },
   # with ouch
-  { on = [ "C", "o", "o" ], run = "plugin ouch",     desc = "Compress with ouch" },
-  { on = [ "C", "o", "t" ], run = "plugin ouch tar", desc = "Compress with ouch" },
+  { on = [ "C", "o", "o" ], run = "plugin ouch",     desc = "ouch zip" },
+  { on = [ "C", "o", "t" ], run = "plugin ouch tar", desc = "ouch tar" },
 
   # Mount
   { on  = "M", run = "plugin mount -- mount", desc = "Mount disk" },

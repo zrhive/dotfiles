@@ -44,7 +44,7 @@ prepend_previewers = [
   # Ouch
   { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run  = "ouch" },
   # Media info
-  { mime = "{audio,video,image}/*",             run = "mediainfo"},
+  { mime = "{audio,video,image}/*",             run = "mediainfo" },
   { mime = "application/subrip",                run = "mediainfo" },
   { mime = "application/postscript",            run = "mediainfo" },
   { mime = "application/illustrator",           run = "mediainfo" },
@@ -53,6 +53,7 @@ prepend_previewers = [
   { mime = "image/x-eps",                       run = "mediainfo" },
   { mime = "application/eps",                   run = "mediainfo" },
   { url = "*.{ai,eps,ait}",                     run = "mediainfo" },
-  # # Piper
-  # { url = "*", run = 'piper -- echo "$1"' },
+  # Piper
+  { url = "*.tar*", run = 'piper --format=url -- tar tf "$1"' },
+  { url = "*.md",   run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
 ]
