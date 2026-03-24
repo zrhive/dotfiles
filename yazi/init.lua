@@ -47,7 +47,3 @@ require("smart-enter"):setup({ open_multi = true })
 if os.getenv("NVIM") then
   require("toggle-pane"):entry("min-parent")
 end
--- toggle-pane for yazi nvim
-if os.getenv("YAZI") then
-  require("toggle-pane"):entry("min-parent")
-end

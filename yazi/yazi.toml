@@ -21,6 +21,11 @@ image_alloc = 1073741824    # = 1024*1024*1024 = 1024MB
 [input]
 cursor_blink = true
 
+[preview]
+image_delay = 50
+image_filter = "lanczos3"
+image_qualoty = 90
+
 [opener]
 edit = [
 	{ run = "direnv exec . $EDITOR %s", desc = "$EDITOR",       for = "unix", block = true },
