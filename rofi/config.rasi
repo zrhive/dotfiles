@@ -42,4 +42,4 @@ configuration {
 }
 
 //// THEME ////
-@theme "themes/rose-pine-moon/theme"
+@theme "themes/rose-pine/moon"
