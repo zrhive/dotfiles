@@ -1,7 +1,7 @@
 [global]
     ### Geometry ###
     origin = top-right
-    width = 500
+    width = 300
     height = (0, 300)
     offset = (10, 50)
     scale = 0
