@@ -9,7 +9,7 @@ opt.shiftwidth = indent
 opt.softtabstop = indent
 opt.expandtab = false
 opt.autoindent = true
-opt.smartindent = false
+-- opt.smartindent = true
 
 ----------------------------------------
 -- search settings
@@ -17,6 +17,7 @@ opt.smartindent = false
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
+-- opt.hlsearch = false
 
 ----------------------------------------
 -- appearance settings
@@ -28,6 +29,7 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.showmode = true
 opt.showcmd = true
+opt.cmdheight = 0
 opt.title = true
 
 ----------------------------------------
