@@ -1,79 +1,53 @@
 [global]
     ### Geometry ###
     origin = top-right
-    width = 300
-    height = (0, 300)
-    offset = (10, 50)
-    scale = 0
-    # notification_limit = 10
+    width = (0, 500)
+    height = (0, 500)
+    offset = (10, 30)
+    notification_limit = 10
 
     ### Progress bar ###
-    progress_bar = true
-    progress_bar_height = 10
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
-    progress_bar_corner_radius = 10
-    progress_bar_corners = all
+    progress_bar_corner_radius = 5
 
-    icon_corner_radius = 2
-    icon_corners = all
-
-    indicate_hidden = yes
     transparency = 0
-    separator_height = 2
-    padding = 8
-    horizontal_padding = 8
-    text_icon_padding = 0
+    padding = 10
+    horizontal_padding = 10
+    #text_icon_padding = 10
 
-    frame_width = 1
+    frame_width = 2
     frame_color = "#8caaee"
-    gap_size = 2
-    # highlight = "#8caaee"
-    # idle_threshold = 120
+    gap_size = 3
+    highlight = "#8caaee"
+    idle_threshold = 120
 
     ### Text ###
-    font = JetBrainsMono Nerd Font Mono 10
-    line_height = 12
-
-    # The format of the message.  Possible variables are:
-    #   %a  appname
-    #   %s  summary
-    #   %b  body
-    #   %c  category
-    #   %S  stack_tag
-    #   %i  iconname (including its path)
-    #   %I  iconname (without its path)
-    #   %p  progress value if set ([  0%] to [100%]) or nothing
-    #   %n  progress value if set without any extra characters
-    #   %%  literal %
-    # Markup is allowed
-    format = "<b>%a:</b> %s\n%b"
-
-    show_age_threshold = 60
+    font = JetBrainsMono Nerd Font 12
+    line_height = 5
+    format = "<b>%s</b>\n%b\n%p"
     ellipsize = end
-    ignore_newline = no
-
-    stack_duplicates = true
-    hide_duplicate_count = false
     enable_posix_regex = true
 
     ### Icons ###
-    # icon_theme = Papirus
+    icon_corner_radius = 5
+    icon_corners = all
+    icon_theme = Papirus
     min_icon_size = 32
     max_icon_size = 128
+    enable_recursive_icon_lookup = true
 
-    ### History ###
-    sticky_history = yes
-    history_length = 20
-
-    ### Misc/Advanced ###
+    ### Corners ###
     corner_radius = 5
+    corners = all
 
-    ### mouse
+    ### Mouse ###
     mouse_left_click = open_url
     mouse_middle_click = close_all
     mouse_right_click = do_action, close_current
+
+    ### Keybinds ###
+    #mod4+backslash = context
+    #mod4+| = history
+    #mod4+backspace = close
 
 [urgency_low]
     background = "#303446"
