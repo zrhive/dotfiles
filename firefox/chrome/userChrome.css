@@ -66,7 +66,7 @@
  *  4 – toolbar on bottom
  */
 :root {
-  --uc-toolbar-position: 0;
+  --uc-toolbar-position: 4;
 }
 
 /*  Darken the Personal Toolbar by X amount
@@ -77,10 +77,6 @@
   :root {
     --uc-darken-toolbar: 0.2;
   }
-
-  .bookmark-item > .toolbarbutton-icon[scr^="page-icon:https://github.com.*"] {
-    background-color: white !important;
-  }
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -89,12 +85,12 @@
 }
 
 /* Hide bookmark text by default */
-.bookmark-item > .toolbarbutton-text { display: none !important; }
-.bookmark-item > .toolbarbutton-icon { margin-inline-end: 0px !important; }
+/* .bookmark-item > .toolbarbutton-text { display: none !important; } */
+/* .bookmark-item > .toolbarbutton-icon { margin-inline-end: 0px !important; } */
 
 /* Show bookmark text on hover */
-.bookmark-item:hover > .toolbarbutton-text { display: block !important; }
-.bookmark-item:hover > .toolbarbutton-icon { margin-inline-end: 3px !important; }
+/* .bookmark-item:hover > .toolbarbutton-text { display: block !important; } */
+/* .bookmark-item:hover > .toolbarbutton-icon { margin-inline-end: 3px !important; } */
 
 /* Center bookmarks and adjust padding */
 /* #PlacesToolbarItems { */

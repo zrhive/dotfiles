@@ -10,7 +10,7 @@ function Linemode:size_and_mtime()
   elseif os.date("%Y", time) == os.date("%Y") then
     time = os.date("%b %d", time)
   else
-    time = os.date("%b --", time)
+    time = os.date("", time)
   end
 
   return string.format("%s %s", size and ya.readable_size(size) or "", time)

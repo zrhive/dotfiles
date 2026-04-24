@@ -3,7 +3,7 @@
     origin = top-right
     width = (0, 500)
     height = (0, 500)
-    offset = (10, 30)
+    offset = (20, 30)
     notification_limit = 10
 
     ### Progress bar ###
