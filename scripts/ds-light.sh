@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/usr/bin/env sh
 
 light_perc=$(light -G | awk '{printf "%.0f%%", int($1)}')
 

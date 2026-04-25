@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/usr/bin/env sh
 
 # batt_perc=$(upower -b | awk '/percentage/ { gsub(/%/, ""); print $2 }')
 batt_perc=$(upower -b | awk '/percentage/ { print $2 }')

@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/usr/bin/env sh
 
 date_current=$(date now | format date '%Y-%m-%d %H:%M:%S')
 
