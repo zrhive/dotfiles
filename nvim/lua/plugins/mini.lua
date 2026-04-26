@@ -48,18 +48,18 @@ return {
   },
 
   -- animate
-  -- {
-  --   "nvim-mini/mini.animate",
-  --   version = "*",
-  --   config = function()
-  --     local animate = require("mini.animate")
-  --     animate.setup({
-  --       scroll = {
-  --         subscroll = animate.gen_subscroll.equal({ max_output_steps = 120 }),
-  --       },
-  --     })
-  --   end,
-  -- },
+  {
+    "nvim-mini/mini.animate",
+    version = "*",
+    config = function()
+      local animate = require("mini.animate")
+      animate.setup({
+        scroll = {
+          subscroll = animate.gen_subscroll.equal({ max_output_steps = 120 }),
+        },
+      })
+    end,
+  },
 
   -- notify
   -- { "nvim-mini/mini.notify", version = "*", opts = {
