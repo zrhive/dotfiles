@@ -1,4 +1,16 @@
 -- -------------------------------------------------
+-- Show symlink in status bar
+-- -------------------------------------------------
+Status:children_add(function(self)
+  local h = self._current.hovered
+  if h and h.link_to then
+    return " -> " .. tostring(h.link_to)
+  else
+    return ""
+  end
+end, 3300, Status.LEFT)
+
+-- -------------------------------------------------
 -- Size and modifies time in linemode
 -- -------------------------------------------------
 function Linemode:size_and_mtime()
@@ -10,7 +22,7 @@ function Linemode:size_and_mtime()
   elseif os.date("%Y", time) == os.date("%Y") then
     time = os.date("%b %d", time)
   else
-    time = os.date("", time)
+    time = os.date("--- --", time)
   end
 
   return string.format("%s %s", size and ya.readable_size(size) or "", time)
@@ -22,18 +34,6 @@ end
 require("session"):setup({
   sync_yanked = true,
 })
-
--- -------------------------------------------------
--- Show symlink in status bar
--- -------------------------------------------------
-Status:children_add(function(self)
-  local h = self._current.hovered
-  if h and h.link_to then
-    return " -> " .. tostring(h.link_to)
-  else
-    return ""
-  end
-end, 3300, Status.LEFT)
 
 -- -------------------------------------------------
 -- Plugins setup
