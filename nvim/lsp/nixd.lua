@@ -10,7 +10,7 @@ return {
         expr = "import <nixpkgs> {} ",
       },
       formatting = {
-        command = { "alejandra" },
+        command = { "nixfmt-rfc-style", "nixfmt-tree", "nixfmt", "alejandra" },
       },
       options = {
         nixos = {
