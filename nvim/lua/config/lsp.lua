@@ -11,8 +11,8 @@ diagnostics.setup()
 -- on attach function
 local group = vim.api.nvim_create_augroup("LspMappings", { clear = true })
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = group,
-	callback = on_attach,
+  group = group,
+  callback = on_attach,
 })
 
 -- capabilitites for servers
