@@ -4,6 +4,7 @@
 -- https://github.com/folke/lazy.nvim
 --------------------------------------
 
+
 -- Bootstrap lazy.nvim
 --------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -33,4 +34,12 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true, notify = false },
   change_detection = { notify = false },
+
+  performance = {
+    -- so that plugins outside of lazy can be loaded
+    reset_packpath = false,
+  },
 })
+
+-- load plugins outside of lazy
+vim.cmd([[ packloadall]])
