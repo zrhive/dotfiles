@@ -1,0 +1,41 @@
+# : Lengthen uptime output
+long_uptime = true
+# : Lengthen shell output
+long_shell = false
+# : Lengthen kernel output
+long_kernel = true
+# : Toggle current or default shell
+current_shell = true
+# : Toggle physical or logical cores
+physical_cores = true
+# : Disks to show disk usage
+disks = ["/"]
+# : Show percentage next to disk
+disk_space_percentage = true
+# : Show percentage next to memory
+memory_percentage = true
+# : Themes in "$XDG_CONFIG_DIR/macchina/themes"
+# : ~/.config/macchina/themes/<themeName>.toml
+# : set to "<themeName>"
+theme = "Lithium"
+# : Displays the specified readouts.
+show = [
+  "Host",
+  "Machine",
+  "Kernel",
+  "Distribution",
+  "DesktopEnvironment",
+  "WindowManager",
+  "Resolution",
+  "Backlight",
+  "Packages",
+  "Terminal",
+  "Shell",
+  "Uptime",
+  "Processor",
+  "ProcessorLoad",
+  "Memory",
+  "Battery",
+  "GPU",
+  "DiskSpace"
+]
