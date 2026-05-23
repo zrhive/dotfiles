@@ -28,7 +28,7 @@ image_qualoty = 90
 
 [opener]
 edit = [
-	{ run = "direnv exec . $EDITOR %s", desc = "$EDITOR",       for = "unix", block = true },
+	{ run = "direnv reload; $EDITOR %s", desc = "$EDITOR",       for = "unix", block = true },
 	{ run = "sudoedit %s",              desc = "sudo $EDITOR",  for = "unix", block = true },
 ]
 
