@@ -11,6 +11,8 @@ return {
       c = { "clangtidy" },
     }
 
+    -- lint.try_lint("*", { ignore_errors = true })
+
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,

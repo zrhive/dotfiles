@@ -1,4 +1,4 @@
-local servers = { "lua_ls", "nixd", "clangd" }
+local servers = { "lua_ls", "nixd", "clangd", "bashls", "yamlls", "tombi" }
 
 local utils_lsp = require("utils.lsp")
 local on_attach = utils_lsp.on_attach

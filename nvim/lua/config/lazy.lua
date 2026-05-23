@@ -4,7 +4,6 @@
 -- https://github.com/folke/lazy.nvim
 --------------------------------------
 
-
 -- Bootstrap lazy.nvim
 --------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -29,6 +28,7 @@ require("lazy").setup({
   spec = {
     -- import the plugins
     { import = "plugins" },
+    { import = "plugins/mini" },
   },
 
   -- automatically check for plugin updates
