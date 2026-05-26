@@ -42,6 +42,7 @@ require("folder-rules"):setup()
 require("recycle-bin"):setup()
 require("full-border"):setup({ type = ui.Border.ROUNDED })
 require("smart-enter"):setup({ open_multi = true })
+require("zoxide"):setup({ update_db = true })
 
 -- toggle-pane for yazi nvim
 if os.getenv("NVIM") then

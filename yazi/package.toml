@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "ac82af3"
-hash = "eff8ff12fa4e5f035a10d8aeeb4c258d"
+rev = "25918dc"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "ac82af3"
-hash = "4c0260feb50ea2437380690ffc241da7"
+rev = "be524fb"
+hash = "9c7987da2d2a2120dac33abb64132004"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
@@ -25,33 +25,33 @@ hash = "e4d7c06510b4fe5f64ae31fbb4e017d6"
 
 [[plugin.deps]]
 use = "TD-Sky/sudo"
-rev = "86205aa"
-hash = "9628b660afb192d32f2ea5f6634d3e72"
+rev = "afd61ce"
+hash = "d390cd2d8b996939a695411b446f58d0"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "e73fd74"
+rev = "6c8f6d6"
 hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "46a6b9f"
-hash = "771af2becc575a3f43d0542de823969d"
+rev = "e60e122"
+hash = "fbaf0adc8efc59555b748d36aab62d40"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "ac82af3"
+rev = "be524fb"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "ac82af3"
+rev = "be524fb"
 hash = "c887903a63a2ff520081b6d90a4b3392"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "ac82af3"
-hash = "77e20b071404f97c09d3f9afdb9482e0"
+rev = "9a52857"
+hash = "4fccaaf10c36dc2466e2438a386ff017"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
@@ -68,5 +68,27 @@ use = "boydaihungst/mediainfo"
 rev = "49f5ab7"
 hash = "e9a32b121fac586ee0b5f62e18b89c79"
 
-[flavor]
-deps = []
+[[plugin.deps]]
+use = "yazi-rs/plugins:types"
+rev = "be524fb"
+hash = "9105494e98299f392aee95340066da9f"
+
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "c5d4b48"
+hash = "e6e98d12b1648d1894c2b560d85eeaa7"
+
+[[plugin.deps]]
+use = "hankertrix/augment-command"
+rev = "f9b1513"
+hash = "8e4e3488e5560e68fc35543c59350e85"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine-moon"
+rev = "94385fe"
+hash = "c43af67ff78b88b73a61a27cf19aa82b"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "36c49ac"
+hash = "33609b87eae21b29135d798c9ad2b86c"
