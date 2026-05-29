@@ -1,11 +1,11 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "25918dc"
-hash = "6fa6a05a81c98dd000fbca3cca6e9682"
+rev = "c2c16c8"
+hash = "7b625412411be411153886894d9acaf"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "be524fb"
+rev = "c2c16c8"
 hash = "9c7987da2d2a2120dac33abb64132004"
 
 [[plugin.deps]]
@@ -30,7 +30,7 @@ hash = "d390cd2d8b996939a695411b446f58d0"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "6c8f6d6"
+rev = "e73fd74"
 hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [[plugin.deps]]
@@ -40,37 +40,37 @@ hash = "fbaf0adc8efc59555b748d36aab62d40"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "be524fb"
+rev = "c2c16c8"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "be524fb"
+rev = "c2c16c8"
 hash = "c887903a63a2ff520081b6d90a4b3392"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "9a52857"
-hash = "4fccaaf10c36dc2466e2438a386ff017"
+rev = "c2c16c8"
+hash = "e3260d0b1feded8c8e3ae3afa1169e30"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
-rev = "ac82af3"
+rev = "c2c16c8"
 hash = "3f8d49413bc8691b4c652eb417a20178"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "ac82af3"
-hash = "384464b6df8cb807425c521f8cd790f3"
+rev = "c2c16c8"
+hash = "d99cfbc3812e7738505f9e4bedb759cd"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "49f5ab7"
-hash = "e9a32b121fac586ee0b5f62e18b89c79"
+rev = "4f80288"
+hash = "7eeae1e194ccb6bd8d8e75b7f10d8cbd"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:types"
-rev = "be524fb"
+rev = "c2c16c8"
 hash = "9105494e98299f392aee95340066da9f"
 
 [[plugin.deps]]
@@ -80,15 +80,15 @@ hash = "e6e98d12b1648d1894c2b560d85eeaa7"
 
 [[plugin.deps]]
 use = "hankertrix/augment-command"
-rev = "f9b1513"
-hash = "8e4e3488e5560e68fc35543c59350e85"
+rev = "6c1d866"
+hash = "909cc89d6388b52c8e04026368441e30"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine-moon"
 rev = "94385fe"
-hash = "c43af67ff78b88b73a61a27cf19aa82b"
+hash = "edbe0dfb5db8ff37281dba62adc7e750"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
 rev = "36c49ac"
-hash = "33609b87eae21b29135d798c9ad2b86c"
+hash = "67f2240fd9c98f21714527a24cd672f8"
