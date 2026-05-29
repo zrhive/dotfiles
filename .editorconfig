@@ -8,5 +8,5 @@ charset = utf-8
 indent_style = space
 indent_size = 2
 
-[*.{md,sh}]
+[*.{md,sh,kdl}]
 indent_size = 4
