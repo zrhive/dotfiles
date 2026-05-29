@@ -1,0 +1,15 @@
+// WINDOW RULES AND LAYER RULES
+// https://github.com/niri-wm/niri/wiki/Configuration:-Window-Rules
+// https://github.com/niri-wm/niri/wiki/Configuration:-Layer-Rules
+
+// : Include rule files ------------------------------
+// include optional=true "<name>.kdl"
+include optional=true "firefox.kdl"
+
+
+// ---------------------------------------------------
+// Rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
