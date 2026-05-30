@@ -1,0 +1,13 @@
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+    background-effect {
+        blur true
+    }
+}
+
+// FIREFOX
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}

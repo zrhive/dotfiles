@@ -1,0 +1,187 @@
+binds {
+    // HOTKEYS LIST ----------------------------
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // Suggested binds for running programs: terminal, app launcher, screen locker.
+    Mod+Return hotkey-overlay-title="Open Kitty Terminal" cooldown-ms=500 { spawn "kitty"; }
+    Mod+Shift+Return hotkey-overlay-title="Open Rofi Launcher" { spawn "rofi" "-show"; }
+    //Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    Mod+Space repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
+
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-column-width-back; }
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+M { maximize-window-to-edges; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    Mod+W { toggle-column-tabbed-display; }
+
+    // Actions to switch layouts.
+    Mod+Backspace       { switch-layout "next"; }
+    Mod+Shift+Backspace { switch-layout "prev"; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape { quit; }
+    // Mod+Shift+Escape { power-off-monitors; }
+
+    //: COLUMN AND WINDOW ----------------------
+    Mod+H           { focus-column-left; }
+    Mod+J           { focus-window-down; }
+    Mod+K           { focus-window-up; }
+    Mod+L           { focus-column-right; }
+    //------------------------------------------
+    Mod+Shift+H     { move-column-left; }
+    Mod+Shift+J     { move-window-down; }
+    Mod+Shift+K     { move-window-up; }
+    Mod+Shift+L     { move-column-right; }
+    //------------------------------------------
+    Mod+Home        { focus-column-first; }
+    Mod+End         { focus-column-last; }
+    Mod+Shift+Home  { move-column-to-first; }
+    Mod+Shift+End   { move-column-to-last; }
+    //: WORKSPACE ------------------------------
+    Mod+Page_Down       { focus-window-or-workspace-down; }
+    Mod+Page_Up         { focus-window-or-workspace-up; }
+    Mod+Shift+Page_Down { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Page_Up   { move-window-up-or-to-workspace-up; }
+    //------------------------------------------
+    Mod+Ctrl+J          { focus-workspace-down; }
+    Mod+Ctrl+K          { focus-workspace-up; }
+    Mod+Ctrl+Shift+J    { move-workspace-down; }
+    Mod+Ctrl+Shift+K    { move-workspace-up; }
+    //------------------------------------------
+    // Mod+Ctrl+Shift+J    { move-column-to-workspace-down; }
+    // Mod+Ctrl+Shift+K    { move-column-to-workspace-up; }
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-up; }
+    //------------------------------------------
+    Mod+1       cooldown-ms=100 repeat=false { focus-workspace 1; }
+    Mod+2       cooldown-ms=100 repeat=false { focus-workspace 2; }
+    Mod+3       cooldown-ms=100 repeat=false { focus-workspace 3; }
+    Mod+4       cooldown-ms=100 repeat=false { focus-workspace 4; }
+    Mod+5       cooldown-ms=100 repeat=false { focus-workspace 5; }
+    Mod+6       cooldown-ms=100 repeat=false { focus-workspace 6; }
+    Mod+7       cooldown-ms=100 repeat=false { focus-workspace 7; }
+    Mod+8       cooldown-ms=100 repeat=false { focus-workspace 8; }
+    Mod+9       cooldown-ms=100 repeat=false { focus-workspace 9; }
+    //------------------------------------------
+    Mod+Shift+1 cooldown-ms=100 repeat=false { move-column-to-workspace 1; }
+    Mod+Shift+2 cooldown-ms=100 repeat=false { move-column-to-workspace 2; }
+    Mod+Shift+3 cooldown-ms=100 repeat=false { move-column-to-workspace 3; }
+    Mod+Shift+4 cooldown-ms=100 repeat=false { move-column-to-workspace 4; }
+    Mod+Shift+5 cooldown-ms=100 repeat=false { move-column-to-workspace 5; }
+    Mod+Shift+6 cooldown-ms=100 repeat=false { move-column-to-workspace 6; }
+    Mod+Shift+7 cooldown-ms=100 repeat=false { move-column-to-workspace 7; }
+    Mod+Shift+8 cooldown-ms=100 repeat=false { move-column-to-workspace 8; }
+    Mod+Shift+9 cooldown-ms=100 repeat=false { move-column-to-workspace 9; }
+    //------------------------------------------
+    Mod+Ctrl+1  cooldown-ms=100 repeat=false { move-window-to-workspace 1; }
+    Mod+Ctrl+2  cooldown-ms=100 repeat=false { move-window-to-workspace 2; }
+    Mod+Ctrl+3  cooldown-ms=100 repeat=false { move-window-to-workspace 3; }
+    Mod+Ctrl+4  cooldown-ms=100 repeat=false { move-window-to-workspace 4; }
+    Mod+Ctrl+5  cooldown-ms=100 repeat=false { move-window-to-workspace 5; }
+    Mod+Ctrl+6  cooldown-ms=100 repeat=false { move-window-to-workspace 6; }
+    Mod+Ctrl+7  cooldown-ms=100 repeat=false { move-window-to-workspace 7; }
+    Mod+Ctrl+8  cooldown-ms=100 repeat=false { move-window-to-workspace 8; }
+    Mod+Ctrl+9  cooldown-ms=100 repeat=false { move-window-to-workspace 9; }
+    //------------------------------------------
+    Mod+Grave   repeat=false { focus-workspace-previous; }
+    Mod+Tab     repeat=false { focus-window-previous; }
+    //------------------------------------------
+
+    //: MONITOR --------------------------------
+    Mod+Alt+H           { focus-monitor-left; }
+    Mod+Alt+J           { focus-monitor-down; }
+    Mod+Alt+K           { focus-monitor-up; }
+    Mod+Alt+L           { focus-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Shift+H     { move-column-to-monitor-left; }
+    Mod+Alt+Shift+J     { move-column-to-monitor-down; }
+    Mod+Alt+Shift+K     { move-column-to-monitor-up; }
+    Mod+Alt+Shift+L     { move-column-to-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Left        { move-window-to-monitor-left; }
+    Mod+Alt+Down        { move-window-to-monitor-down; }
+    Mod+Alt+Up          { move-window-to-monitor-up; }
+    Mod+Alt+Right       { move-window-to-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Shift+Left  { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Down  { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Up    { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Right { move-workspace-to-monitor-left; }
+    //------------------------------------------
+
+    //: SCROLL BINDINGS ------------------------
+    Mod+WheelScrollDown                 cooldown-ms=200 { focus-column-right; }
+    Mod+WheelScrollUp                   cooldown-ms=200 { focus-column-left; }
+    Mod+Shift+WheelScrollDown           cooldown-ms=200 { move-column-right; }
+    Mod+Shift+WheelScrollUp             cooldown-ms=200 { move-column-left; }
+    //------------------------------------------
+    Mod+Ctrl+WheelScrollDown            cooldown-ms=200 { focus-workspace-down; }
+    Mod+Ctrl+WheelScrollUp              cooldown-ms=200 { focus-workspace-up; }
+    Mod+Ctrl+Shift+WheelScrollDown      cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Ctrl+Shift+WheelScrollUp        cooldown-ms=200 { move-column-to-workspace-up; }
+    //------------------------------------------
+    Mod+TouchpadScrollRight             cooldown-ms=200 { focus-column-right; }
+    Mod+TouchpadScrollLeft              cooldown-ms=200 { focus-column-left; }
+    Mod+Shift+TouchpadScrollRight       cooldown-ms=200 { move-column-right; }
+    Mod+Shift+TouchpadScrollLeft        cooldown-ms=200 { move-column-left; }
+    //------------------------------------------
+    Mod+TouchpadScrollDown              cooldown-ms=200 { focus-workspace-down; }
+    Mod+TouchpadScrollUp                cooldown-ms=200 { focus-workspace-up; }
+    Mod+Shift+TouchpadScrollDown        cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Shift+TouchpadScrollUp          cooldown-ms=200 { move-column-to-workspace-up; }
+    //------------------------------------------
+    Mod+Alt+TouchpadScrollUp            allow-when-locked=true cooldown-ms=200 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }
+    Mod+Alt+TouchpadScrollDown          allow-when-locked=true cooldown-ms=200 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    Mod+Alt+Shift+TouchpadScrollUp      allow-when-locked=true cooldown-ms=200 { spawn "light" "-A" "10"; }
+    Mod+Alt+Shift+TouchpadScrollDown    allow-when-locked=true cooldown-ms=200 { spawn "light" "-U" "10"; }
+    //------------------------------------------
+
+    //: SCREENSHOT KEYS -------------------------
+    Print           { screenshot-screen; }
+    Mod+Print       { screenshot-window; }
+    Mod+Ctrl+Print  { screenshot; }
+    //------------------------------------------
+
+    //: BACKLIGHT FN KEYS -----------------------
+    // XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp     allow-when-locked=true cooldown-ms=150 { spawn "light" "-A" "10"; }
+    XF86MonBrightnessDown   allow-when-locked=true cooldown-ms=150 { spawn "light" "-U" "10"; }
+    //------------------------------------------
+
+    //: AUDIO FN KEYS ---------------------------
+    XF86AudioRaiseVolume    allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }
+    XF86AudioLowerVolume    allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute           allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute        allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    //------------------------------------------
+}

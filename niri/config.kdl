@@ -1,127 +1,68 @@
-// vim:fileencoding=utf-8:foldmethod=marker
-// ----------------------------------------
-// Niri
-// ----------------------------------------
-// A scrollable-tiling Wayland compositor
-// https://github.com/niri-wm/niri
-// ----------------------------------------
-
-// : MISCELLANEOUS ------------------------ {{{
-spawn-at-startup "kitty"
-cursor {
-    hide-when-typing
-    hide-after-inactive-ms 5000
-}
-overview {
-    zoom 0.5
-    backdrop-color "#262626"
-    workspace-shadow {
-        // off
-        softness 40
-        spread 10
-        offset x=0 y=10
-        color "#00000050"
-    }
-}
-hotkey-overlay {
-    skip-at-startup
-}
+//: GENERAL -------------------------------
 prefer-no-csd
-screenshot-path "~/Pictures/Screenshots from %Y-%m-%d_%H-%M-%S.png"
-// ---------------------------------------- }}}
+spawn-at-startup "kitty"
+spawn-at-startup "yazi"
+cursor { hide-when-typing; hide-after-inactive-ms 5000; }
+overview { zoom 1; backdrop-color "#1e1e2e"; }
+hotkey-overlay { skip-at-startup; }
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
-// : INPUT -------------------------------- {{{
+//: INPUT ---------------------------------
 input {
     keyboard {
         xkb { }
-        repeat-delay 600
-        repeat-rate 25
+        repeat-delay 400
+        repeat-rate 30
         track-layout "global"
     }
     touchpad {
-        // off // Uncomment this line to disable this input.
         tap
-        // drag false
-        natural-scroll
         accel-speed 0.3
         accel-profile "adaptive"
-        // scroll-factor 1.0
-        // scroll-factor vertical=1.0 horizontal=-2.0
+        scroll-factor 1.0
         scroll-method "two-finger"
         tap-button-map "left-right-middle"
         click-method "clickfinger"
     }
     mouse {
-        // off // Uncomment this line to disable this input.
         accel-speed 0.0
         accel-profile "adaptive"
-        // scroll-factor 1.0
-        // scroll-factor vertical=1.0 horizontal=-2.0
+        scroll-factor 1.5
+        scroll-method "on-button-down"
         scroll-button-lock
     }
-    disable-power-key-handling
-    warp-mouse-to-focus mode="center-xy"
-    focus-follows-mouse max-scroll-amount="10%"
+    warp-mouse-to-focus
+    focus-follows-mouse
     workspace-auto-back-and-forth
 }
-// ---------------------------------------- }}}
 
-// : OUTPUTS ------------------------------ {{{
-/-output "eDP-1" {
-    // off // Uncomment this line to disable this output.
-    mode "1920x1080@120.030"
-    scale 2
-    transform "normal"
-    position x=1280 y=0
-}
-// ---------------------------------------- }}}
-
-// : LAYOUT ------------------------------- {{{
+//: LAYOUT --------------------------------
 layout {
+    gaps 15
     background-color "#1e1e2e"
-    gaps 5
     center-focused-column "never"
     always-center-single-column
     empty-workspace-above-first
-
+    // default-column-display "tabbed"
     preset-column-widths {
+        proportion 0.33333
         proportion 0.5
-        proportion 0.5
-        // Fixed sets the width in logical pixels exactly.
-        // fixed 1920
+        proportion 0.66667
     }
-
-    // default-column-width { proportion 0.5; }
-    default-column-width {}
-    // preset-window-heights { }
-
+    default-column-width { proportion 0.5; }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
     focus-ring {
-        // off
-        on
-        width 2
+        width 1.4
         active-color "#b7bdf8"
         inactive-color "#6e738d"
         urgent-color "#eed49f"
     }
-    border {
-        off
-        // on
-        width 2
-        active-color "#b7bdf8"
-        inactive-color "#6e738d"
-        urgent-color "#eed49f"
-    }
-    shadow {
-        // off
-        on
-        draw-behind-window true
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
-    }
+    border { off; }
     tab-indicator {
-        // off
         on
         hide-when-single-tab
         place-within-column
@@ -135,21 +76,11 @@ layout {
         inactive-color "#6e738d"
         urgent-color "#eed49f"
     }
-
-    insert-hint {
-        // off
-        on
-    }
-
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
-    }
+    insert-hint { color "#303446"; }
 }
-// ---------------------------------------- }}}
 
-include "animations.kdl"
-include "binds/binds.kdl"
-include "rules/rules.kdl"
+
+//: INCLUDE CONFIG FILES ------------------
+include "binds.kdl"
+include "rules.kdl"
+include "profiles/config.kdl"

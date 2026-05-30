@@ -1,0 +1,15 @@
+input {
+    disable-power-key-handling
+    warp-mouse-to-focus mode="center-xy-always"
+    focus-follows-mouse max-scroll-amount="20%"
+}
+
+output "eDP-1" {
+    mode "1920x1080@60"
+    scale 1.0
+    transform "normal"
+    hot-corners {
+        bottom-left
+        bottom-right
+    }
+}
