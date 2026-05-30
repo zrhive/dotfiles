@@ -1,34 +1,33 @@
 [global]
-    ### Geometry ###
+    #: GEOMETRY
     origin = top-right
     width = (0, 500)
     height = (0, 500)
     offset = (20, 30)
     notification_limit = 10
 
-    ### Progress bar ###
-    progress_bar_corner_radius = 5
-
+    #: FRAME
     transparency = 0
     padding = 10
     horizontal_padding = 10
-    #text_icon_padding = 10
-
     frame_width = 2
     frame_color = "#8caaee"
     gap_size = 3
     highlight = "#8caaee"
+
+    #: INDICATOR
+    stack_duplicates = false
     sort = update
     idle_threshold = 120
 
-    ### Text ###
+    #: TEXT
     font = JetBrainsMono Nerd Font 12
     line_height = 5
     format = "<b>%s</b>\n%b\n%p"
     ellipsize = end
     enable_posix_regex = true
 
-    ### Icons ###
+    #: ICONS
     icon_corner_radius = 5
     icon_corners = all
     icon_theme = Papirus
@@ -36,19 +35,24 @@
     max_icon_size = 128
     enable_recursive_icon_lookup = true
 
-    ### Corners ###
+    #: CORNERS
     corner_radius = 5
     corners = all
 
-    ### Mouse ###
-    mouse_left_click = open_url
+    #: MOUSE
+    mouse_left_click = open_url,context
     mouse_middle_click = close_all
-    mouse_right_click = do_action, close_current
+    mouse_right_click = context_all
 
-    ### Keybinds ###
-    #mod4+backslash = context
-    #mod4+| = history
-    #mod4+backspace = close
+    #: WAYLAND SUPPORT
+    layer = overlay
+    force_xwayland = true
+
+[shortcuts]
+    close = mod4+delete
+    close_all = mod4+shift+delete
+    history = mod4+backspace
+    context = mod4+shift+backspace
 
 [urgency_low]
     background = "#303446"
@@ -70,4 +74,3 @@
     timeout = 0
     override_pause_level = 60
     default_icon = dialog-warning
-
