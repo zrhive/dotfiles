@@ -1,6 +1,16 @@
-require("config.globals")
-require("config.options")
-require("config.keymaps")
-require("config.autocmds")
-require("config.lazy")
-require("config.lsp")
+require("config")
+
+local servers = {
+    "lua_ls",
+    "nixd",
+    "clangd",
+    "bashls",
+    "yamlls",
+    "tombi"
+}
+
+-- enable servers
+vim.lsp.enable(servers)
+
+-- catppuccin theme
+vim.cmd.colorscheme "catppuccin-nvim"

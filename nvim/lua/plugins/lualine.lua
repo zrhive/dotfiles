@@ -3,10 +3,7 @@ return {
   lazy = false,
   dependencies = { "nvim-tree/nvim-web-devicons" },
 
-  config = function()
-    local lualine = require("lualine")
-
-    lualine.setup({
+  opts = {
       options = {
         section_separators = " ",
         component_separators = "",
@@ -36,6 +33,6 @@ return {
         lualine_y = { "diff", "diagnostics" },
         lualine_z = { "location", "progress" },
       },
-    })
-  end,
+
+  },
 }

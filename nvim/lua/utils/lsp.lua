@@ -25,16 +25,6 @@ function M.on_attach(client, bufnr)
   if vim.lsp.inlay_hint then
     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
   end
-
-  -- Format on save (opt-in per server)
-  -- if client.server_capabilities.documentFormattingProvider then
-  -- 	vim.api.nvim_create_autocmd("BufWritePre", {
-  -- 		buffer = bufnr,
-  -- 		callback = function()
-  -- 			vim.lsp.buf.format({ async = false })
-  -- 		end,
-  -- 	})
-  -- end
 end
 
 return M
