@@ -11,8 +11,8 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 input {
     keyboard {
         xkb { }
-        repeat-delay 400
-        repeat-rate 30
+        repeat-delay 300
+        repeat-rate 45
         track-layout "global"
     }
     touchpad {
@@ -83,4 +83,5 @@ layout {
 //: INCLUDE CONFIG FILES ------------------
 include "binds.kdl"
 include "rules.kdl"
+include "noctalia.kdl"
 include "profiles/config.kdl"

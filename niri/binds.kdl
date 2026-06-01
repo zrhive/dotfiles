@@ -1,21 +1,21 @@
 binds {
-    // HOTKEYS LIST ----------------------------
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open Kitty Terminal" cooldown-ms=500 { spawn "kitty"; }
-    Mod+Shift+Return hotkey-overlay-title="Open Rofi Launcher" { spawn "rofi" "-show"; }
-    //Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Return          hotkey-overlay-title="Yazi File Manager"    cooldown-ms=500 { spawn "kitty" "-e" "yazi"; }
+    Mod+Shift+Return    hotkey-overlay-title="Kitty Terminal"       cooldown-ms=500 { spawn "kitty"; }
+    Mod+Shift+Space     hotkey-overlay-title="Rofi Launcher"                        { spawn "rofi" "-show"; }
 
-    Mod+Space repeat=false { toggle-overview; }
-    Mod+Q repeat=false { close-window; }
-
+    Mod+Space           repeat=false            { toggle-overview; }
+    Mod+Q               repeat=false            { close-window; }
+    Mod+Escape          allow-inhibiting=false  { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape                            { quit; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
+    //: CYCLE
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-column-width-back; }
     Mod+Ctrl+Shift+R { switch-preset-window-height; }
@@ -29,11 +29,6 @@ binds {
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
-
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
@@ -43,13 +38,14 @@ binds {
     // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
 
-    // Actions to switch layouts.
+
     Mod+Backspace       { switch-layout "next"; }
     Mod+Shift+Backspace { switch-layout "prev"; }
 
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+Escape { quit; }
-    // Mod+Shift+Escape { power-off-monitors; }
+    Mod+I       { set-column-width "-10%"; }
+    Mod+O       { set-column-width "+10%"; }
+    Mod+Shift+I { set-window-height "-10%"; }
+    Mod+Shift+O { set-window-height "+10%"; }
 
     //: COLUMN AND WINDOW ----------------------
     Mod+H           { focus-column-left; }
@@ -67,15 +63,15 @@ binds {
     Mod+Shift+Home  { move-column-to-first; }
     Mod+Shift+End   { move-column-to-last; }
     //: WORKSPACE ------------------------------
-    Mod+Page_Down       { focus-window-or-workspace-down; }
-    Mod+Page_Up         { focus-window-or-workspace-up; }
-    Mod+Shift+Page_Down { move-window-down-or-to-workspace-down; }
-    Mod+Shift+Page_Up   { move-window-up-or-to-workspace-up; }
-    //------------------------------------------
     Mod+Ctrl+J          { focus-workspace-down; }
     Mod+Ctrl+K          { focus-workspace-up; }
     Mod+Ctrl+Shift+J    { move-workspace-down; }
     Mod+Ctrl+Shift+K    { move-workspace-up; }
+    //------------------------------------------
+    Mod+Page_Down       { focus-window-or-workspace-down; }
+    Mod+Page_Up         { focus-window-or-workspace-up; }
+    Mod+Shift+Page_Down { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Page_Up   { move-window-up-or-to-workspace-up; }
     //------------------------------------------
     // Mod+Ctrl+Shift+J    { move-column-to-workspace-down; }
     // Mod+Ctrl+Shift+K    { move-column-to-workspace-up; }
@@ -114,8 +110,6 @@ binds {
     //------------------------------------------
     Mod+Grave   repeat=false { focus-workspace-previous; }
     Mod+Tab     repeat=false { focus-window-previous; }
-    //------------------------------------------
-
     //: MONITOR --------------------------------
     Mod+Alt+H           { focus-monitor-left; }
     Mod+Alt+J           { focus-monitor-down; }
@@ -136,8 +130,6 @@ binds {
     Mod+Alt+Shift+Down  { move-workspace-to-monitor-left; }
     Mod+Alt+Shift+Up    { move-workspace-to-monitor-left; }
     Mod+Alt+Shift+Right { move-workspace-to-monitor-left; }
-    //------------------------------------------
-
     //: SCROLL BINDINGS ------------------------
     Mod+WheelScrollDown                 cooldown-ms=200 { focus-column-right; }
     Mod+WheelScrollUp                   cooldown-ms=200 { focus-column-left; }
@@ -163,25 +155,18 @@ binds {
     Mod+Alt+TouchpadScrollDown          allow-when-locked=true cooldown-ms=200 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     Mod+Alt+Shift+TouchpadScrollUp      allow-when-locked=true cooldown-ms=200 { spawn "light" "-A" "10"; }
     Mod+Alt+Shift+TouchpadScrollDown    allow-when-locked=true cooldown-ms=200 { spawn "light" "-U" "10"; }
-    //------------------------------------------
-
     //: SCREENSHOT KEYS -------------------------
     Print           { screenshot-screen; }
     Mod+Print       { screenshot-window; }
     Mod+Ctrl+Print  { screenshot; }
-    //------------------------------------------
-
     //: BACKLIGHT FN KEYS -----------------------
     // XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
     XF86MonBrightnessUp     allow-when-locked=true cooldown-ms=150 { spawn "light" "-A" "10"; }
     XF86MonBrightnessDown   allow-when-locked=true cooldown-ms=150 { spawn "light" "-U" "10"; }
-    //------------------------------------------
-
     //: AUDIO FN KEYS ---------------------------
     XF86AudioRaiseVolume    allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }
     XF86AudioLowerVolume    allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute           allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute        allow-when-locked=true cooldown-ms=150 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    //------------------------------------------
 }
