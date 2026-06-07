@@ -43,9 +43,3 @@ set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 ----------------------------------------
 set("v", "<", "<gv", { desc = "Indent left and reselect" })
 set("v", ">", ">gv", { desc = "Indent right and reselect" })
-
-----------------------------------------
--- Nvim Tree explorer
-----------------------------------------
-set("n", "<leader>e", "<Cmd>NvimTreeFocus<CR>", { desc = "Focus on File Explorer" })
-set("n", "<leader>E", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })

@@ -6,8 +6,8 @@ return {
     local lint = require("lint")
 
     lint.linters_by_ft = {
-      -- lua = { "luacheck" },
-      nix = { "nix" },
+      lua = { "luacheck" },
+      nix = { "nix", "deadnix", "statix" },
       c = { "clangtidy" },
     }
 

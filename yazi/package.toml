@@ -9,11 +9,6 @@ rev = "c2c16c8"
 hash = "9c7987da2d2a2120dac33abb64132004"
 
 [[plugin.deps]]
-use = "ndtoan96/ouch"
-rev = "406ce6c"
-hash = "f5afc904d5106ee368c8aa2ded43bd74"
-
-[[plugin.deps]]
 use = "uhs-robert/recycle-bin"
 rev = "fa68711"
 hash = "8714306b5cac6359edbacbf545fbd691"
@@ -39,11 +34,6 @@ rev = "e60e122"
 hash = "fbaf0adc8efc59555b748d36aab62d40"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:smart-enter"
-rev = "c2c16c8"
-hash = "187cc58ba7ac3befd49c342129e6f1b6"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
 rev = "c2c16c8"
 hash = "c887903a63a2ff520081b6d90a4b3392"
@@ -52,11 +42,6 @@ hash = "c887903a63a2ff520081b6d90a4b3392"
 use = "yazi-rs/plugins:mount"
 rev = "c2c16c8"
 hash = "e3260d0b1feded8c8e3ae3afa1169e30"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:smart-paste"
-rev = "c2c16c8"
-hash = "3f8d49413bc8691b4c652eb417a20178"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
@@ -82,11 +67,6 @@ hash = "e6e98d12b1648d1894c2b560d85eeaa7"
 use = "hankertrix/augment-command"
 rev = "6c1d866"
 hash = "909cc89d6388b52c8e04026368441e30"
-
-[[flavor.deps]]
-use = "Mintass/rose-pine-moon"
-rev = "94385fe"
-hash = "edbe0dfb5db8ff37281dba62adc7e750"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"

@@ -6,7 +6,8 @@ local servers = {
     "clangd",
     "bashls",
     "yamlls",
-    "tombi"
+    "taplo",
+    "tombi",
 }
 
 -- enable servers

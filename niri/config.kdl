@@ -1,7 +1,7 @@
 //: GENERAL -------------------------------
 prefer-no-csd
+spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "kitty"
-spawn-at-startup "yazi"
 cursor { hide-when-typing; hide-after-inactive-ms 5000; }
 overview { zoom 1; backdrop-color "#1e1e2e"; }
 hotkey-overlay { skip-at-startup; }

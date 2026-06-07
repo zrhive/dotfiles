@@ -28,39 +28,6 @@ return {
       },
     },
   },
-
-  -- hipatterns
-  {
-    "nvim-mini/mini.hipatterns",
-    version = "*",
-    config = function()
-      local hipatterns = require("mini.hipatterns")
-      hipatterns.setup({
-        highlighters = {
-          fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-          hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-          todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-          note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-          hex_color = hipatterns.gen_highlighter.hex_color(),
-        },
-      })
-    end,
-  },
-
-  -- animate
-  {
-    "nvim-mini/mini.animate",
-    version = "*",
-    config = function()
-      local animate = require("mini.animate")
-      animate.setup({
-        scroll = {
-          subscroll = animate.gen_subscroll.equal({ max_output_steps = 120 }),
-        },
-      })
-    end,
-  },
-
   -- notify
   -- { "nvim-mini/mini.notify", version = "*", opts = {
   --   lsp_progress = { enable = false },
