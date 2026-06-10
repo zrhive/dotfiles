@@ -1,11 +1,11 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "7b625412411be411153886894d9acaf"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "9c7987da2d2a2120dac33abb64132004"
 
 [[plugin.deps]]
@@ -35,27 +35,27 @@ hash = "fbaf0adc8efc59555b748d36aab62d40"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "c887903a63a2ff520081b6d90a4b3392"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "e3260d0b1feded8c8e3ae3afa1169e30"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "d99cfbc3812e7738505f9e4bedb759cd"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "4f80288"
-hash = "7eeae1e194ccb6bd8d8e75b7f10d8cbd"
+rev = "a6d30a1"
+hash = "a28bae93edccc371b234f4ad1b936a31"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:types"
-rev = "c2c16c8"
+rev = "598cdb6"
 hash = "9105494e98299f392aee95340066da9f"
 
 [[plugin.deps]]
@@ -65,10 +65,10 @@ hash = "e6e98d12b1648d1894c2b560d85eeaa7"
 
 [[plugin.deps]]
 use = "hankertrix/augment-command"
-rev = "6c1d866"
-hash = "909cc89d6388b52c8e04026368441e30"
+rev = "0001012"
+hash = "2522f40fda971cbc03b08edaf33e510a"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
-rev = "36c49ac"
+rev = "0f9204b"
 hash = "67f2240fd9c98f21714527a24cd672f8"

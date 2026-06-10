@@ -108,7 +108,7 @@ require("yatline"):setup({
           type = "string",
           custom = false,
           name = "hovered_name",
-          params = { true, 24, 4, true },
+          params = { true, 24, 10, true },
         },
       },
       section_c = {
