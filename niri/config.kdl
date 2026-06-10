@@ -1,87 +1,193 @@
+//: catppuccin colorscheme from noctalia
+include "noctalia.kdl"
+
 //: GENERAL -------------------------------
 prefer-no-csd
-spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "kitty"
-cursor { hide-when-typing; hide-after-inactive-ms 5000; }
 overview { zoom 1; backdrop-color "#1e1e2e"; }
-hotkey-overlay { skip-at-startup; }
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
+
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "kitty" "-e" "yazi"
+spawn-at-startup "kitty"
 
 //: INPUT ---------------------------------
 input {
-    keyboard {
-        xkb { }
-        repeat-delay 300
-        repeat-rate 45
-        track-layout "global"
-    }
+    warp-mouse-to-focus; focus-follows-mouse; workspace-auto-back-and-forth;
+    keyboard { xkb; }
     touchpad {
-        tap
-        accel-speed 0.3
-        accel-profile "adaptive"
-        scroll-factor 1.0
-        scroll-method "two-finger"
-        tap-button-map "left-right-middle"
-        click-method "clickfinger"
+        tap; accel-profile "adaptive"; scroll-method "two-finger";
+        tap-button-map "left-right-middle"; click-method "clickfinger";
     }
-    mouse {
-        accel-speed 0.0
-        accel-profile "adaptive"
-        scroll-factor 1.5
-        scroll-method "on-button-down"
-        scroll-button-lock
-    }
-    warp-mouse-to-focus
-    focus-follows-mouse
-    workspace-auto-back-and-forth
+    mouse { accel-profile "adaptive"; scroll-method "on-button-down"; scroll-button-lock; }
 }
 
 //: LAYOUT --------------------------------
 layout {
-    gaps 15
     background-color "#1e1e2e"
-    center-focused-column "never"
     always-center-single-column
-    empty-workspace-above-first
-    // default-column-display "tabbed"
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    default-column-width { proportion 0.5; }
-    preset-window-heights {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    focus-ring {
-        width 1.4
-        active-color "#b7bdf8"
-        inactive-color "#6e738d"
-        urgent-color "#eed49f"
-    }
+    focus-ring { width 2; }
     border { off; }
-    tab-indicator {
-        on
-        hide-when-single-tab
-        place-within-column
-        gap 0
-        width 5
-        length total-proportion=1.0
-        position "right"
-        gaps-between-tabs 0
-        corner-radius 1
-        active-color "#b7bdf8"
-        inactive-color "#6e738d"
-        urgent-color "#eed49f"
-    }
-    insert-hint { color "#303446"; }
+    tab-indicator { hide-when-single-tab; position "bottom"; gaps-between-tabs 10; }
 }
 
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+Return          hotkey-overlay-title="Yazi File Manager"    cooldown-ms=500 { spawn "kitty" "-e" "yazi"; }
+    Mod+Shift+Return    hotkey-overlay-title="Kitty Terminal"       cooldown-ms=500 { spawn "kitty"; }
+    Mod+Shift+Space     hotkey-overlay-title="Rofi Launcher"                        { spawn "rofi" "-show"; }
+
+    Mod+Space           repeat=false            { toggle-overview; }
+    Mod+Q               repeat=false            { close-window; }
+    Mod+Escape          allow-inhibiting=false  { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape                            { quit; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+
+    //: CYCLE
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-column-width-back; }
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+M { maximize-window-to-edges; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    Mod+W { toggle-column-tabbed-display; }
+
+
+    Mod+Backspace       { switch-layout "next"; }
+    Mod+Shift+Backspace { switch-layout "prev"; }
+
+    Mod+I       { set-column-width "-10%"; }
+    Mod+O       { set-column-width "+10%"; }
+    Mod+Shift+I { set-window-height "-10%"; }
+    Mod+Shift+O { set-window-height "+10%"; }
+
+    //: COLUMN AND WINDOW ----------------------
+    Mod+H           { focus-column-left; }
+    Mod+J           { focus-window-down; }
+    Mod+K           { focus-window-up; }
+    Mod+L           { focus-column-right; }
+    //------------------------------------------
+    Mod+Shift+H     { move-column-left; }
+    Mod+Shift+J     { move-window-down; }
+    Mod+Shift+K     { move-window-up; }
+    Mod+Shift+L     { move-column-right; }
+    //------------------------------------------
+    Mod+Home        { focus-column-first; }
+    Mod+End         { focus-column-last; }
+    Mod+Shift+Home  { move-column-to-first; }
+    Mod+Shift+End   { move-column-to-last; }
+    //: WORKSPACE ------------------------------
+    Mod+Ctrl+J          { focus-workspace-down; }
+    Mod+Ctrl+K          { focus-workspace-up; }
+    Mod+Ctrl+Shift+J    { move-workspace-down; }
+    Mod+Ctrl+Shift+K    { move-workspace-up; }
+    //------------------------------------------
+    Mod+Page_Down       { focus-window-or-workspace-down; }
+    Mod+Page_Up         { focus-window-or-workspace-up; }
+    Mod+Shift+Page_Down { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Page_Up   { move-window-up-or-to-workspace-up; }
+    //------------------------------------------
+    // Mod+Ctrl+Shift+J    { move-column-to-workspace-down; }
+    // Mod+Ctrl+Shift+K    { move-column-to-workspace-up; }
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-up; }
+    //------------------------------------------
+    Mod+1       repeat=false { focus-workspace 1; }
+    Mod+2       repeat=false { focus-workspace 2; }
+    Mod+3       repeat=false { focus-workspace 3; }
+    Mod+4       repeat=false { focus-workspace 4; }
+    Mod+5       repeat=false { focus-workspace 5; }
+    Mod+6       repeat=false { focus-workspace 6; }
+    Mod+7       repeat=false { focus-workspace 7; }
+    Mod+8       repeat=false { focus-workspace 8; }
+    Mod+9       repeat=false { focus-workspace 9; }
+    //------------------------------------------
+    Mod+Shift+1 repeat=false { move-column-to-workspace 1; }
+    Mod+Shift+2 repeat=false { move-column-to-workspace 2; }
+    Mod+Shift+3 repeat=false { move-column-to-workspace 3; }
+    Mod+Shift+4 repeat=false { move-column-to-workspace 4; }
+    Mod+Shift+5 repeat=false { move-column-to-workspace 5; }
+    Mod+Shift+6 repeat=false { move-column-to-workspace 6; }
+    Mod+Shift+7 repeat=false { move-column-to-workspace 7; }
+    Mod+Shift+8 repeat=false { move-column-to-workspace 8; }
+    Mod+Shift+9 repeat=false { move-column-to-workspace 9; }
+    //------------------------------------------
+    Mod+Ctrl+1  repeat=false { move-window-to-workspace 1; }
+    Mod+Ctrl+2  repeat=false { move-window-to-workspace 2; }
+    Mod+Ctrl+3  repeat=false { move-window-to-workspace 3; }
+    Mod+Ctrl+4  repeat=false { move-window-to-workspace 4; }
+    Mod+Ctrl+5  repeat=false { move-window-to-workspace 5; }
+    Mod+Ctrl+6  repeat=false { move-window-to-workspace 6; }
+    Mod+Ctrl+7  repeat=false { move-window-to-workspace 7; }
+    Mod+Ctrl+8  repeat=false { move-window-to-workspace 8; }
+    Mod+Ctrl+9  repeat=false { move-window-to-workspace 9; }
+    //------------------------------------------
+    Mod+Grave   repeat=false { focus-workspace-previous; }
+    Mod+Tab     repeat=false { focus-window-previous; }
+    //: MONITOR --------------------------------
+    Mod+Alt+H           { focus-monitor-left; }
+    Mod+Alt+J           { focus-monitor-down; }
+    Mod+Alt+K           { focus-monitor-up; }
+    Mod+Alt+L           { focus-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Shift+H     { move-column-to-monitor-left; }
+    Mod+Alt+Shift+J     { move-column-to-monitor-down; }
+    Mod+Alt+Shift+K     { move-column-to-monitor-up; }
+    Mod+Alt+Shift+L     { move-column-to-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Left        { move-window-to-monitor-left; }
+    Mod+Alt+Down        { move-window-to-monitor-down; }
+    Mod+Alt+Up          { move-window-to-monitor-up; }
+    Mod+Alt+Right       { move-window-to-monitor-right; }
+    //------------------------------------------
+    Mod+Alt+Shift+Left  { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Down  { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Up    { move-workspace-to-monitor-left; }
+    Mod+Alt+Shift+Right { move-workspace-to-monitor-left; }
+    //: SCROLL BINDINGS ------------------------
+    Mod+WheelScrollDown            cooldown-ms=200 { focus-column-right; }
+    Mod+WheelScrollUp              cooldown-ms=200 { focus-column-left; }
+    Mod+Shift+WheelScrollDown      cooldown-ms=200 { move-column-right; }
+    Mod+Shift+WheelScrollUp        cooldown-ms=200 { move-column-left; }
+    //------------------------------------------
+    Mod+Ctrl+WheelScrollDown       cooldown-ms=200 { focus-workspace-down; }
+    Mod+Ctrl+WheelScrollUp         cooldown-ms=200 { focus-workspace-up; }
+    Mod+Ctrl+Shift+WheelScrollDown cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Ctrl+Shift+WheelScrollUp   cooldown-ms=200 { move-column-to-workspace-up; }
+    //------------------------------------------
+    Mod+TouchpadScrollRight        cooldown-ms=200 { focus-column-right; }
+    Mod+TouchpadScrollLeft         cooldown-ms=200 { focus-column-left; }
+    Mod+Shift+TouchpadScrollRight  cooldown-ms=200 { move-column-right; }
+    Mod+Shift+TouchpadScrollLeft   cooldown-ms=200 { move-column-left; }
+    //------------------------------------------
+    Mod+TouchpadScrollDown         cooldown-ms=200 { focus-workspace-down; }
+    Mod+TouchpadScrollUp           cooldown-ms=200 { focus-workspace-up; }
+    Mod+Shift+TouchpadScrollDown   cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Shift+TouchpadScrollUp     cooldown-ms=200 { move-column-to-workspace-up; }
+    //: SCREENSHOT KEYS -------------------------
+    Print          repeat=false { screenshot-screen; }
+    Mod+Print      repeat=false { screenshot-window; }
+    Mod+Ctrl+Print repeat=false { screenshot; }
+}
 
 //: INCLUDE CONFIG FILES ------------------
-include "binds.kdl"
 include "rules.kdl"
-include "noctalia.kdl"
 include "profiles/config.kdl"
